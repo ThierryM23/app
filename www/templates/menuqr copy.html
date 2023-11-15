@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block title %}Search{% endblock %}
+
+{% block head %}
+    {{ super() }}
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <style>
+      .row   {
+        font-family: 'Libre Baskerville', serif;
+
+      }
+    </style>
+    <style type="text/css">
+
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+        <h1> Carte Saisonnière</h1>
+
+        {% set count = namespace(value=1) %}
+        {% set vars = {'cat': 'Entrées'} %}
+        <div class="row align-items-center rounded-3 bg-danger m-2">
+            <div class="col-3"><img src="static/images/gallery/chicken-caesar-salad-6sq.jpg" width="90"></div>
+            <div class="text-light col-9"><h1>{{ vars['cat'] }}</h1><p class=""></p></div>
+        </div>
+        <div class="row align-items-start m-1 p-1">
+    {% for row in resultados %}
+        {% if row['cat']|int == count.value %}
+                    <div class="col-12 col-xs-6 col-lg-4 col-xl-2 bg-light text-dark rounded shadow m-1 p-1">
+                        <div class="row align-items-start m-1 p-1">
+                            <div class="col m-1 p-1">
+                              <h3  class="fs-3 fw-bold text-danger">{{ row['titre'] }}</h3>
+                                <p class="fs-5 text-wrap">{{ row['description'] }}
+                                </p>
+                                <footer class="row m-1 p-1">
+                                    <div class="text-end"><span class="badge fs-2 bg-secondary">{{ row['prix'] }}€</span></div>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+        {% else  %}
+        {% set count.value = count.value + 1 %}
+        </div>
+        <div class="row align-items-center rounded-3 bg-danger m-2">
+            <div class="col-3"><img src="static/images/gallery/chicken-caesar-salad-6sq.jpg" width="90"></div>
+            <div class="text-light col-9"><h1>{{ row['Categories'] }}</h1><p class=""></p></div>
+        </div>
+        <div class="row align-items-start m-1 p-1">
+
+         <div class="col-12 col-xs-6 col-lg-4 col-xl-2 bg-light text-dark rounded shadow m-1 p-1">
+            <div class="row align-items-start m-1 p-1">
+                <div class="col  m-1 p-1">
+                    <h3  class="fs-3 fw-bold text-danger">{{ row['titre'] }}</h3>
+                    <p class="fs-5 text-wrap">{{ row['description'] }}
+                    </p>
+                    <footer class="row m-1 p-1">
+                        <div class="text-end"><span class="badge fs-2 bg-secondary">{{ row['prix'] }}€</span></div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

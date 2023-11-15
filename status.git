@@ -1,0 +1,38 @@
+PS C:\Users\Tamara\Desktop\dev_docker\webside> git tree
+*   0b709a7 (HEAD -> main) sin nada
+|\
+| * 6b409d3 agregue sin no hay menu del dia
+* | b6dba7f fin de menus sin datos
+* | 2da49d9 agregue sin no hay menu del dia
+|/
+*   9a86242 Merge branch 'main' into menudujour
+|\
+| * e809c63 modif en readme pero en main
+* | 27e4d47 modif en el readme.md
+|/
+* 8c62c9f modif en entorno
+* 0d5ed0a solo el runtime
+* e4a7084 (tag: version_1, master) Version inicial 1.0
+PS C:\Users\Tamara\Desktop\dev_docker\webside> git log
+commit 0b709a7b68e620267a6dd783daab1e1474c4b81a (HEAD -> main)
+Merge: b6dba7f 6b409d3
+Author: Thierry Meunier <thierry.meunier23@gmail.com>
+Date:   Tue Nov 14 19:25:45 2023 -0300
+
+    sin nada
+
+commit b6dba7f191ec7a93748437f90cc5961c61f62f62
+Author: Thierry Meunier <thierry.meunier23@gmail.com>
+Date:   Tue Nov 14 19:18:37 2023 -0300
+
+    fin de menus sin datos
+
+commit 2da49d93cdc9dee4f3772a899cf002a5e5fbefbb
+Author: Thierry Meunier <thierry.meunier23@gmail.com>
+Date:   Tue Nov 14 17:30:19 2023 -0300
+
+    agregue sin no hay menu del dia
+
+commit 6b409d3c209a4e1e1969fb26ae0938a8ea71e546
+Author: Thierry Meunier <thierry.meunier23@gmail.com>
+Date:   Tue Nov 14 17:27:40 2023 -0300

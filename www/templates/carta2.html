@@ -1,0 +1,651 @@
+{% extends "layout.html" %} {% block title %}Search{% endblock %} {% block head
+    %} {{ super() }}
+    <style type="text/css"></style>
+    {% endblock %} 
+    
+    
+    {% block content %}
+  
+
+<div class="row">
+    <div class="col-12">
+        <div class="tabs-custom tabs-horizontal tabs-classic" id="tabs-1">
+            <ul class="nav nav-tabs nav-tabs-classic">
+                <li class="nav-item " role="presentation">
+                    <a class="nav-link active show" href="#tabs-0-1" data-toggle="tab">Entrées</a>
+                </li>
+                <li class="nav-item" role="presentation"> <a class="nav-link" href="#tabs-1-1" data-toggle="tab">Plats</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-2" data-toggle="tab">Fromages &amp; Planches</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-5" data-toggle="tab">Desserts</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-3" data-toggle="tab">Coupes de glaces</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-4" data-toggle="tab">Menus</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active show" id="tabs-0-1">
+                    <div class="box-event-modern">
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-0-1">Tartare de thon et avocat</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 15</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    accompagné de roquette
+                                </div>
+                            </div>
+                        </div><div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-0-1">Gravelax de truite</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 15</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    sauce aneth
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-0-1">Rosace de tomate et sa burrata</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 13</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    glace basilic.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-0-1">Tarte fine</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 12</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    selon marché.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-0-1">Salade fraîcheur</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 12</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    100% végétal
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="tabs-1-1">
+                    <div class="box-event-modern">
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-1">Tartare de boeuf au couteau</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end prix">
+                                        <h6>€ 17,50</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    environ 200gr, frites maison, salade.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-1">Tataki de boeuf</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 18.50</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    Environ 200gr, tagliatelles, pesto à l'ail des ours.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-1">Filet de bar rôti au thym</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 22,50</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    fondue de poireaux.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-1">Filet de truite à la Grenobloise</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 20</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    câpres, oignons, croutons.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-1">Côte de bœuf pour 2 personnes</a>
+                                        </h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 55</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    environ 1,2kg, frites, salade.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-1">Burger Végétarien</a>
+                                        </h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 15</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    galette de PDT, légumes du moment.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-1">Cheeseburger</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 16.50</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    buns maison, cheddar, salade, tomate, oignons.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-1">Double Cheeseburger</a>
+                                        </h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 20</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    buns maison, cheddar, salade, tomate, oignons.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tabs-1-2">
+                    <div class="box-event-modern">
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h2><a href="#tabs-1-2">Fromages</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-2">Camembert rôti (pour deux)</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 10,50</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-2">Assiette 3 fromages</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 7</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-2">Faiselle de pays</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 6</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    crème ou coulis       
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h2><a href="#tabs-1-2">Planches à partager</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-2">Planche de charcuterie</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 16</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-2">Planche de fromage de nos région</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 16</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-2">Planche mixte</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 17</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tabs-1-5">
+                    <div class="box-event-modern">
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-2">Entremets aux 2 chartreuses</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 8.50</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-2">Snicker maison</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 7,50</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-2">Café gourmand</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 8,50</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-2">Tarte aux pommes</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 6,50</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    boule de glace vanille.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-2">Crème brûlée</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 6</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-2">crumble aux fruits de saison</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 6,50</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tabs-1-3">
+                    <div class="box-event-modern">
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-3">Bueno</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 10</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    2 boules noisette, 1 boule vanille, éclats de Kinder.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-3">Pêche Melba</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 10</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    3 boules vanille, pêche, coulis de fruits rouges, chantilly.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-3">Colonel</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 12</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    3 boules citrons, vodka.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-3">Chartreusette</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 12</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    3 boules chartreuse, liqueur de chartreuse verte.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-3">Suplements l'unité</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 2,50</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    Vanille, chocolat, noisette, noix de coco, citron, 
+                                    Barbe à papa, fraise, framboise, rhum/raisin, caramel, melon.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center m-2 ">
+                            <div class=" event-item-modern">
+                                <div class="row align-items-center">
+                                    <div class="col-9 col-md-9">
+                                        <h4><a href="#tabs-1-3">Suplements 2 boules</a></h4>
+                                    </div>
+                                    <div class="col-3 col-md-3 me-0 text-end ">
+                                        <h6>€ 4</h6>
+                                    </div>
+                                </div>
+                                <div class="event-item-modern-text">
+                                    Vanille, chocolat, noisette, noix de coco, citron, 
+                                    Barbe à papa, fraise, framboise, rhum/raisin, caramel, melon.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tabs-1-4">
+                    <div class="pricing-table">
+                        <h3 class="pricing-title">Menu enfant € 12</h3>
+
+                        <!-- Lista de Caracteristicas / Propiedades -->
+                        <ul class="table-list">
+                            <li>
+                                <p>Plat au choix </p>
+                                <p>+ sirop </p>
+                            </li>
+                            <li>
+                                <p>
+                                    </p><hr>choisir le plat entre
+                                <p></p>
+                                <p>
+                                </p><h5>Gratin de coquillettes jambon</h5>
+                                <p></p>
+                                <p>
+                                </p><h5>-- Ou --</h5>
+                                <p></p>
+                                <p>
+                                </p><h5>Burger frites maison</h5>
+                                <p></p>
+                                <p>
+                                </p><h5>-- Ou --</h5>
+                                <p></p>
+                                <p>
+                                </p><h5>Steak frites maison</h5>
+                                <p></p>
+                                <p>
+                                    </p><hr>desert entre
+                                <p></p>
+                                <p>
+                                </p><h5>Mousse au chocolat</h5>
+                                <p></p>
+                                <p>
+                                </p><h5>-- Ou --</h5>
+                                <p></p>
+                                <p>
+                                </p><h5>1 boules de glace</h5>
+                                <p></p>
+                            </li>
+                        </ul>
+                        <!-- Contratar / Comprar -->
+                        <div class="price">12 €</div>
+                    </div>
+                    <div class="pricing-table">
+                        <h3 class="pricing-title">Menu a € 34</h3>
+                        <!-- Lista de Caracteristicas / Propiedades -->
+                        <ul class="table-list">
+                            <li>
+                                <p>Entrées au choix</p>
+                                <h6>
+                                    <p>Gravelax de truite</p>
+                                    <p>-- Ou --</p>
+                                    <p>Salade fraîcheur</p>
+                                </h6>
+                                <hr>
+                            </li>
+                            <li>
+                                <p>Plats au choix</p>
+                                <h6>
+                                    <p>
+                                        Truite à la Grenobloise</p>
+                                    <p>-- Ou --</p>
+                                    <p>Tataki de boeuf
+                                    </p>
+                                <hr>
+                            </h6></li>
+                            <li>
+                                <p>Dessert au choix</p>
+                                <h6>
+                                    <p>
+                                        Tarte aux pommes</p>
+                                    <p>-- Ou --</p>
+                                    <p>Crème brûlée
+                                    </p>
+                                    <p>-- Ou --</p>
+                                    <p>2 boules de glace su choix  </p>
+                            </h6></li>
+                        </ul>
+                        <!-- Contratar / Comprar -->
+                        <div class="price">34 €</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock%}

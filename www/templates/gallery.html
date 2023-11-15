@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+{% block title %}  {{ func }}{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style >
+        .img-thumbnail:hover{
+            border-radius:50%;
+            -webkit-border-radius:50%;
+            box-shadow: 0px 0px 15px 15px #ec731e;
+            -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            }
+
+        .gallery-item-classic img {           
+            padding: 1px;
+            background-image: linear-gradient(to bottom, rgba(45, 230, 12, 1) 0%, rgba(45, 230, 12, 1) 100%), linear-gradient(to bottom, rgba(45, 230, 12, 1) 0%, rgb(230, 121, 12) 100%);
+            background-clip: content-box, padding-box;
+            height: 200px;
+            width: 200px;
+            object-fit: cover;   
+            }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    {% if func == 'upload' %}
+        <div>Uploaded
+            <img src="{{ url_for('send_image', filename=image_name) }}">
+        </div>
+        <form id="Accept-form" action="{{ url_for('add_gallery') }}" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="filename" value="{{image_name}}"></input>
+            <input class="btn btn-primary " name="btn" value="ok" type="submit" ></input>
+            <input class="btn btn-danger " name="btn" value="cancel" type="submit"></input>
+           
+        </form>
+    {% endif %}
+    {% if func == 'gallery' %}
+        <section class="section">
+            <div class="row isotope-wrap">
+                <!-- Isotope Content-->
+                <div class="container">
+                    
+                    <div class="isotope p-1" data-isotope-layout="fitRows" data-isotope-group="gallery" data-lightgallery="group" data-lg-thumbnail="false" >
+                        <!--<div class="row no-gutters row-condensed">-->
+                            {% for image_name in image_names %}
+                            <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-1 isotope-item wow-outer p-1" data-filter="Category 3">
+                                <div class="wow slideInDown" >                                   
+                                    <div class="gallery-item-classic">
+                                        <img  src=" {{ url_for('send_image', filename=image_name) }}" alt=""  />
+                                        <div class="gallery-item-classic-caption">
+                                            <a href=" {{ url_for('send_image', filename=image_name) }} "  data-lightgallery="item">zoom</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+    {% if current_user.is_authenticated %}
+        {% if func != 'upload' %}
+            <div class="row">
+                <p class="text-light">
+                <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+                    <input class="btn btn-primary" id="file-picker" type="file" name="file" accept="image/*" multiple>
+                    <div class="text-light" id="msg"></div>
+                    <input class="btn btn-primary" type="submit" value="Upload!" id="upload-button">
+                </form>
+
+            </div>
+        {% endif %}
+    {% endif%}
+    <script>
+        $("#file-picker").change(function () {
+            var input = document.getElementById('file-picker');
+            for (var i = 0; i < input.files.length; i++) {
+                //koala.jpg, koala.JPG substring(index) lastIndexOf('a') koala.1.jpg
+                var ext = input.files[i].name.substring(input.files[i].name.lastIndexOf('.') + 1).toLowerCase()
+
+                if ((ext == 'jpg') || (ext == 'png') || (ext == 'jpeg')) {
+                    $("#msg").text("Files are supported")
+                } else {
+                    $("#msg").text("Files are NOT supported")
+                    document.getElementById("file-picker").value = "";
+                }
+            }
+        });
+    </script>
+    <script src="{{ url_for('static', filename='js/core.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
+
+{% block script %}  
+
+{% endblock %}
+
+<div class="isotope" data-isotope-layout="fitRows" data-isotope-group="gallery" data-lightgallery="group" data-lg-thumbnail="false" style="position: relative; height: 5600px;">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-2 isotope-item wow-outer" data-filter="Category 3" style="position: absolute; left: 0px; top: 0px;">
+        <div class="wow slideInDown" style="visibility: visible; animation-name: slideInDown;">
+            <div class="gallery-item-classic"><img src="../img/5211d568-9ed2-4e66-ae7b-8698b00817da.jpg" alt="">
+                <div class="gallery-item-classic-caption"><a href="../img/5211d568-9ed2-4e66-ae7b-8698b00817da.jpg" data-lightgallery="item">zoom</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
